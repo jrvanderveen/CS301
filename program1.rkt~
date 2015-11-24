@@ -1,0 +1,6 @@
+#lang racket
+(define iff
+  (lambda (x y)
+    (equal? x y)))
+    
+    

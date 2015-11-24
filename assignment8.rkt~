@@ -1,0 +1,25 @@
+#lang racket
+;;;;;;;;;;helper functions;;;;;;;;
+(define itterate
+  (lambda (e1 s1)
+    (cond [(null? s1) #t])
+    (if (search-l (car e1) s1) 
+        (if (search-r (cdr e1) s1) (itterate (car s1) (cdr s1)) #f) #f)))
+
+(define search-l
+  (lambda (e-l s1)
+    (cond [()()]
+          
+(define search-r
+  (lambda (e-r s1)
+    
+(define match
+  
+;;;;;;;;;;main;;;;;;;;;;;;;;;;;;;;
+(define transitive?
+  (lambda (s1)
+    (cond [(null? s1) #t]
+          (else(itterate (car s1) (cdr s1))))))
+
+;;;;;;;;;;test cases;;;;;;;;;;;;;;
+(transitive? '())

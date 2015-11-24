@@ -1,0 +1,7 @@
+#lang racket
+(define dupla
+  (lambda (x s1)
+    (cond [(null? s1) '()]
+          (else(cons x (dupla x (cdr s1)))))))
+
+(dupla 'a '(a b c r t y))

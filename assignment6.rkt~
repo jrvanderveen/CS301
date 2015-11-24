@@ -1,0 +1,46 @@
+#lang racket
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+
+;; CSCI 301 Fall 2015 
+
+;; Lab #5
+
+;; 
+
+;; Johan van der Veen 
+
+;; W01067384
+
+;; 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(define size
+  (lambda (e s1)
+    (cond [(not(list? e)) (not(not(member e s1)))]
+          [(=(length e)1)(len1 e s1)]
+          (else '(argument mismatch)))))
+
+(define len1
+  (lambda (e s1)
+    (cond [()()]
+    
+
+
+(define member?
+  (lambda (e s1)
+    (if (not(null? e)) (size e s1) '(please enter an element))))
+  
+  
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;  
+(member? 'a '(a b c))
+(member? 'a '((a) b c))
+(member? '(a) '(a b c))
+
+  
+  
+  
+  
+  
+  
+  
+  

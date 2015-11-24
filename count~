@@ -1,0 +1,13 @@
+#lang racket
+(define reference '(and or xor implies not iff))
+
+(define (count-prop-variables seq)
+  (cond [(null? seq) '()]
+        [(list? (car seq)) (count-prop-variables (car seq))]
+        [(not (member (car seq) reference))  
+         (append (list(car seq)) (count-prop-variables (cdr seq)))]
+        (else (count-prop-variables (car seq))
+              (count-prop-variables (cdr seq)))))
+  
+
+(count-prop-variables'((B (A C))  ((C A ))))
